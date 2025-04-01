@@ -1,48 +1,84 @@
+/* Estilos base */
+.header {
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+}
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 1rem;
-    margin: 20px 0px 0px;
-  }
-  /* Oculta la hamburguesa en desktop */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 20px 0px 0px;
+}
+
+/* Oculta la hamburguesa en escritorio */
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* Menu list */
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+/* Botón de contacto en desktop */
+#menuBtnDesktop {
+  display: inline-block; /* Se muestra en escritorio */
+}
+
+/* Botón de contacto en menú hamburguesa */
+#menuBtnBurguer {
+  display: none; /* Oculto en desktop */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* Mostrar el icono de hamburguesa */
   .navbar-toggle {
+    display: block;
+  }
+
+  /* Ocultar el menú normal */
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Mostrar el menú cuando el checkbox está marcado */
+  #chkToggle:checked ~ .navbar .main-nav {
+    display: flex;
+  }
+
+  /* Ocultar botón de contacto en desktop en mobile */
+  #menuBtnDesktop {
     display: none;
   }
-  /* Menu list */
-  .main-nav {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
+
+  /* Mostrar botón de contacto dentro del menú hamburguesa */
+  #menuBtnBurguer {
+    display: inline-block;
   }
-  
-
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .navbar-toggle {
-      display: block;
-      cursor: pointer;
-    }
-    .main-nav {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      margin-top: 1rem;
-    }
-    #chkToggle:checked ~ nav .main-nav {
-      display: flex;
-    }
-    #menuBtnDesktop {
-      display: block; /* optional: hide contact btn on mobile, or handle separately */
-    
-
-    }
-    .Btn2 {
-      display: none;
-    }
+}
+/* Asegurar que btn se muestre en Desktop */
+@media (min-width: 769px) {
+  #menuBtnDesktop {
+    display: inline-block !important; /* Aseguramos que aparezca en desktop */
   }
-
-  
+  #menuBtnBurguer {
+    display: none !important;
+  } /* Aseguramos que no aparezca en desktop */
+}
