@@ -28,41 +28,6 @@
   }
 
 
- .navbar {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 0;
-      height: 70px;
-      align-items: center;
-      
-  }
-
-
-.nav-bar a {
-    font-size: 2em;
-    text-decoration: none;
-    list-style: none;
-    color: white;
-    
-}
-
-.main-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.header {
-    
-    position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 650px;
-    padding-top: 50px;
-    position: relative;
-    
-}
-
 
 a {
   text-decoration: none;
@@ -96,6 +61,7 @@ h4 {
 
         /*HEro*/
 
+
  .hero-content {
  text-align: left;
  margin-bottom: 50px;
@@ -108,6 +74,7 @@ h4 {
 .hero {
  margin: 60px auto;
  max-width: 85%;
+ display: flex;
 }
                     
 .hero-content-buttons a:hover {
@@ -121,8 +88,8 @@ text-decoration: none;
 }
                     
 .btn {
- background-color: var(--Primary);
- color: var(--White);
+background-color: var(--Primary);	
+color: var(--White);
 display: inline;
 margin-top: 30px;
 }
@@ -158,7 +125,7 @@ padding: 15px;
  left: -15%;
  background-color: rgba(0, 0, 0, 0);
  
- /*******************************************display: none;*/
+ display: none;
 }
                     
 .img-card-botton {
@@ -190,6 +157,8 @@ padding: 15px;
   margin: 20px auto;
   padding-bottom: 10px;
   width: 80%;
+  max-width: 300px;
+  min-width: 150px;
 }
 
 .project-card:hover,
@@ -250,52 +219,6 @@ padding: 15px;
                               /*---  PROJECTS SECTION --- */
 
 
-
-
-.recent-projects {
-    margin-top: 50px;
-}
-
-.recent-projects h2 {
-    margin: 30px;
-    text-align: left;
-}
-
-.project-card,
-.project-card h4,
-.project-card p,
-.project-card a {
-    background-color: var(--White);
-    text-align: left;
-    color: var(--Black);
-}
-
-.project-card {
-    margin: 20px auto;
-    padding-bottom: 10px;
-    width: 80%;
-}
-
-.project-card:hover,
-.services-card:hover {
-    box-shadow: 10px 5px 5px var(--NeutralMedium);
-}
-
-.project-text {
-    background-color: var(--White);
-}
-
-.project-card h4,
-.project-card p,
-.project-card a {
-    margin: 10px 0;
-}
-
-.project-card h4,
-.project-card p,
-.project-card .learn-more {
-    padding-left: 10px;
-}
 
 .project-card p {
     color: var(--NeutralMedium);

@@ -1,0 +1,48 @@
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 20px 0px 0px;
+  }
+  /* Oculta la hamburguesa en desktop */
+  .navbar-toggle {
+    display: none;
+  }
+  /* Menu list */
+  .main-nav {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar-toggle {
+      display: block;
+      cursor: pointer;
+    }
+    .main-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    #chkToggle:checked ~ nav .main-nav {
+      display: flex;
+    }
+    #menuBtnDesktop {
+      display: block; /* optional: hide contact btn on mobile, or handle separately */
+    
+
+    }
+    .Btn2 {
+      display: none;
+    }
+  }
+
+  
