@@ -1,0 +1,108 @@
+/* --- TESTIMONIAL  --- */
+
+.testimonial {
+  background-color: var(--NeutralDark);
+  background-image: url("/assets/testimonial/orbit.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 80px 0;
+  margin: 5%;
+  text-align: center;
+}
+
+.testimonial-memojis {
+    background-color: transparent;
+    display:flex;  
+    justify-content: center;
+    position: static;
+    width: 100%;
+    height: 80%;
+  }
+
+.testimonial-memojis img {
+  max-width: 75px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+}
+
+.testimonial-memoji1 {
+  top: 5%;
+  left: 5%;
+  right: auto;
+  bottom: auto;
+}
+
+.testimonial-memoji2 {
+  top: 5%;
+  left: auto;
+  right: 5%;
+  bottom: auto;
+}
+
+.testimonial-memoji3 {
+  top: auto;
+  left: 5%;
+  right: auto;
+  bottom: 5%;
+}
+
+.testimonial-memoji4 {
+  top: auto;
+  left: auto;
+  right: 5%;
+  bottom: 5%;
+}
+
+.testimonial-text {
+  background-color: var(--NeutralDark);
+  padding: 20px;
+}
+
+.testimonial-text h3 {
+  color: var(--White);
+  background-color: var(--NeutralDark);
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.testimonial-text p {
+  background-color: var(--NeutralDark);
+  color: var(--SecondaryDark);
+  font-size: 16px;
+}
+
+.testimonial-profile {
+  background-color: var(--NeutralDark);
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+}
+
+.testimonial-profile-info,
+.testimonial-profile-info p.name,
+.testimonial-profile-info p.origin {
+  background-color: var(--NeutralDark);
+  text-align: left;
+}
+
+.testimonial-profile-info p.name {
+  color: var(--PrimaryLight);
+}
+
+.testimonial-profile-info p.origin {
+  color: var(--White);
+}
+
+.testimonial-profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Ocultar los Memojis en móviles */
+@media screen and (max-width: 768px) {
+    .testimonial-memojis {
+      display: none;
+    }
+  }

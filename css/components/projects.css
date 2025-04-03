@@ -1,0 +1,35 @@
+/* Projects Section */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden si no caben */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+    gap: 20px; /* Espaciado entre tarjetas */
+}
+
+.project-card {
+    flex: 1 1 calc(33.33% - 20px); /* Ajusta el ancho al 33.33% con espacio */
+    max-width: 300px; /* Evita que sean demasiado grandes */
+    background-color: var(--White);
+    text-align: left;
+    padding-bottom: 10px;
+    margin: 10px auto; /* Centra las tarjetas */
+}
+
+.project-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive: En móvil se apilan */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column; /* Acomoda las tarjetas en columna */
+        align-items: center; /* Centra los proyectos en móvil */
+    }
+
+    .project-card {
+        flex: 1 1 100%; /* Cada tarjeta ocupa el 100% del ancho */
+        max-width: 90%; /* Ajusta el tamaño en mobile */
+    }
+}
