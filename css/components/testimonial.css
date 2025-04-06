@@ -100,7 +100,7 @@
   border-radius: 50%;
 }
 
-/* Ocultar los Memojis en móviles */
+/* Remove Memoji- mobile version */
 @media screen and (max-width: 768px) {
     .testimonial-memojis {
       display: none;

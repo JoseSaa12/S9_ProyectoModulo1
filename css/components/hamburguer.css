@@ -20,7 +20,7 @@
   margin: 20px 0px 0px;
 }
 
-/* Oculta la hamburguesa en escritorio */
+/* Hide burguer menu */
 .navbar-toggle {
   display: none;
   cursor: pointer;
@@ -33,24 +33,24 @@
   list-style: none;
 }
 
-/* Botón de contacto en desktop */
+
 #menuBtnDesktop {
-  display: inline-block; /* Se muestra en escritorio */
+  display: inline-block; 
 }
 
-/* Botón de contacto en menú hamburguesa */
+
 #menuBtnBurguer {
-  display: none; /* Oculto en desktop */
+  display: none; 
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  /* Mostrar el icono de hamburguesa */
+  
   .navbar-toggle {
     display: block;
   }
 
-  /* Ocultar el menú normal */
+  
   .main-nav {
     display: none;
     flex-direction: column;
@@ -58,27 +58,27 @@
     margin-top: 1rem;
   }
 
-  /* Mostrar el menú cuando el checkbox está marcado */
+  
   #chkToggle:checked ~ .navbar .main-nav {
     display: flex;
   }
 
-  /* Ocultar botón de contacto en desktop en mobile */
+  
   #menuBtnDesktop {
     display: none;
   }
 
-  /* Mostrar botón de contacto dentro del menú hamburguesa */
+  
   #menuBtnBurguer {
     display: inline-block;
   }
 }
-/* Asegurar que btn se muestre en Desktop */
+
 @media (min-width: 769px) {
   #menuBtnDesktop {
-    display: inline-block !important; /* Aseguramos que aparezca en desktop */
+    display: inline-block !important; 
   }
   #menuBtnBurguer {
     display: none !important;
-  } /* Aseguramos que no aparezca en desktop */
+  } 
 }

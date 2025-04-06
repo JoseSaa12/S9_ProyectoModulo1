@@ -12,7 +12,7 @@
     margin: 60px auto;
     max-width: 85%;
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en móvil */
+    flex-wrap: wrap; 
     align-items: center;
     justify-content: space-between;
   }
@@ -159,12 +159,12 @@
   /* Responsive Design */
   @media (max-width: 768px) {
     .hero {
-      flex-direction: column; /* Coloca los elementos en columna en móvil */
+      flex-direction: column; 
       text-align: center;
     }
   
     .img-card {
-      display: none; /* Oculta img-card en mobile */
+      display: none; 
     }
   }
   

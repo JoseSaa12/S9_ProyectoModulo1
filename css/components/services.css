@@ -40,7 +40,7 @@
     background-color: var(--NeutralMedium);
     border-radius: 50%;
     display: flex;
-    justify-content: flex-start; /* Alinea la imagen a la izquierda */
+    justify-content: flex-start;
     align-items: center;
     width: 80px;
     height: 80px;
@@ -86,7 +86,7 @@
     }
   
     .services h2 {
-      text-align: center; /* Alinea el título al centro en móviles */
+      text-align: center; 
     }
   
     .services-card {
@@ -94,7 +94,7 @@
     }
   
     .img-services {
-      justify-content: center; /* Centra la imagen en móviles */
+      justify-content: center; 
     }
   }
   

@@ -5,19 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Circle Agency</title>
-  <link rel="stylesheet" type="text/css" href="/css/projects.css">
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 />
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <link rel="stylesheet" type="text/css" href="/css/components/hamburguer.css">
-
+  
+  <link rel="stylesheet" type="text/css" href="../css/components/projects.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/components/hamburguer.css">
+  
 
 </head>
 
 <header class="header">
   <input type="checkbox" id="chkToggle" style="display: none" />
+
   <nav class="navbar">
     <a class="logo" href="/">
       <img src="../assets/logos/circle.svg" alt="Circle Logo" />
@@ -59,88 +61,28 @@
   </nav>
 </header>
 
-  <section id="project-page">
-    <h1 class="title">Simplify</h1>
-    <div class="subtitle">
-      <span class="UI-design-title">UI Design & App Development</span>
+<section id="project-page">
+  <h1 class="title"></h1>
+  <div class="subtitle">
+    <span class="UI-design-title"></span>
+    <span class="completed-title">Completed on
+      <span class="completed-title-data"></span>
+    </span>
+  </div>
 
-      <span class="completed-title">Completed on
-        <span class="completed-title-data">June 22, 2021</span>
-      </span>
-    </div>
+  <div class="project-image-section">
+    <img class="project-image" src="" alt="Project Image" />
+  </div>
 
-    <div class="project-image-section">
-      <img class="project-image" src="../assets\projects-section\1.jpg" alt="Simplify image" />
-    </div>
+  <article class="project-description"></article>
+</section>
 
-    <article class="project-description">
-      Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui
-      esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit
-      aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute
-      id deserunt nisi. Aliqua id fugiat nostrud irure ex duis ea quis id quis
-      ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim
-      tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt
-      ut voluptate aute id deserunt nisi.Aliqua id fugiat nostrud irure ex
-      duis ea quis id quis ad et. Sunt quix duis ea quis id quis ad et. Sunt
-      qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.
-      Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate
-      aute id deserunt nisi. <br />
-      <br />
-      Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui
-      esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit
-      aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute
-      id deserunt nisi.Aliqua id fugiat nostrud irure ex duis ea quis id quis
-      ad e dolore cillum minim tempor enim. Elit aute irure tempor cupidatat
-      incididunt sint deserunt ut voluptate aute id deserunt nisis ea quis id
-      quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum
-      minim tempor enim. Elit aute irure tempor cupidatat incididunt sint
-      deserunt ut voluptate aute id deserunt nisi.Aliqua id fugiat nostrud
-      irure ex duis ea quis id quis ad e dolore cillum minim tempor enim. Elit
-      aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute
-      id deserunt nis cillum minim tempor enim.
-    </article>
-  </section>
 
-  <section class="recent-projects">
-    <h2 class="capitalize">Other projects</h2>
-    <div class="projects-container">
-      <article class="project-card">
-        <a class="project-wrapper" href="./projects.html?id=${project.uuid}">
+<section class="recent-projects">
+  <h2 class="capitalize">Other projects</h2>
+  <div class="projects-container-api"></div>
+</section>
 
-          <img class="img-project" src="../assets/projects-section/4.jpg" alt="Project 1" />
-          <div class="project-inner-card">
-            <h4 class="project-title">Orbit</h4>
-            <p class="project-description capitalize">UI design</p>
-            <a class="learn-more" href="#">Learn more</a>
-          </div>
-        </a>
-      </article>
-      <article class="project-card">
-        <a class="project-wrapper" href="./projects.html?id=${project.uuid}">
-
-          <img class="img-project" src="../assets/projects-section/5.jpg" alt="Project 2" />
-          <div class="project-inner-card">
-            <h4 class="project-title">Purify</h4>
-            <p class="project-description capitalize">UI/UX Design</p>
-            <a class="learn-more" href="#">Learn more</a>
-          </div>
-        </a>
-      </article>
-      <article class="project-card">
-        <a class="project-wrapper" href="./projects.html?id=${project.uuid}">
-
-          <img class="img-project" src="../assets/projects-section/6.jpg" alt="Project 3" />
-          <div class="project-inner-card">
-            <h4 class="project-title">CryptoPie</h4>
-            <p class="project-description capitalize">App Development</p>
-            <a class="learn-more" href="#">Learn more</a>
-          </div>
-        </a>
-      </article>
-    </div>
-  </section>
-
-  <newsletter-component></newsletter-component>
 
   <footer class="footer">
     <div class="address-info">
@@ -173,7 +115,7 @@
   </div>
 
   
-  <script src="/js/projects.js"></script>
+  <script src="../js/projects.js"></script>
 </body>
 
 </html>
