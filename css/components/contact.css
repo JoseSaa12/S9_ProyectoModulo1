@@ -109,8 +109,8 @@ input:focus, textarea:focus {
 /* Botón de enviar */
 .buttonSubmit {
     text-align: center;
-    padding: 8PX;
-    
+    width: 100%;
+    margin-top: 20px;   
 }
 
 #submitForm {
@@ -121,6 +121,7 @@ input:focus, textarea:focus {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    width: 100%;
 }
 
 #submitForm:hover {

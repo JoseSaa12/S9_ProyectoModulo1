@@ -1,149 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <link rel="stylesheet" type="text/css" href="../css/components/contact.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/components/contact.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/components/hamburguer.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
 
-<header-component> </header-component>
-
-<header class="header">
-    <input type="checkbox" id="chkToggle" style="display: none" />
-    <nav class="navbar">
-      <a class="logo" href="/">
-        <img src="../assets/logos/circle.svg" alt="Circle Logo" />
-      </a>
-
-      <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
-        <i class="fa fa-bars burger"></i>
-
-      </label>
-
-      <ul class="main-nav">
-        <li>
-          <a class="nav-links menu-selected" href="/">Home</a>
-        </li>
-        <li>
-          <a class="nav-links menu-selected" href="/#projects">Projects</a>
-        </li>
-        <li>
-          <a class="nav-links menu-selected" href="/#services">Services</a>
-        </li>
-        <li>
-          <a
-            class="btn capitalize"
-            href="./pages/contact.html"
-            id="menuBtnBurguer"
-            style="display: inline"
-            >Contact us</a
-          >
-        </li>
-      </ul>
-
-      <a
-        class="btn capitalize"
-        href="./pages/contact.html"
-        id="menuBtnDesktop"
-        style="display: none"
-        >Contact us</a
-      >
-    </nav>
-  </header>
-
-
-
-
-<form id="form-container" action="" method="get" class="formClass">
-<h1>Contact Us</h1>
-
-<div class="nameDiv">
-    <label for="name">Full name:</label><br>
-    <input type="text" placeholder="Enter your full name" id="name" name="name" onblur="validateName()" ><br>
-    <p id="nameError" hidden class="errorForm">Please, complete the field NAME with your name </p>
-
-</div>
-
-<div class="emailAndPhone">
-    <div>
-        <label for="email">Email</label><br>
-        <input type="email" name="email" id="email" placeholder="Enter your email address"
-            onblur="validateEmail()" required>
-        <p id="errorEmail" hidden class="errorForm">Please, complete the field EMAIL</p>
-        <p id="errorFormatEmail" hidden class="errorForm">Invalid email</p>
-    </div>
-    
-    <div>
-        <label for="phone">Phone</label><br>
-        <input type="text" name="phone" id="phone" placeholder="Enter your phone number"
-            onblur="validatePhone()" required>
-        <p id="errorPhone" hidden class="errorForm">Please enter your phone number</p>
-    </div>
-</div>
-
-<div class="messageDiv">
-    <label for="message">Message</label><br>
-    <textarea name="message" id="message" cols="30" rows="10"
-        placeholder="Write your message here..." onblur="validateMessage()" required></textarea>
-        <p id="errorMessageUser" hidden class="errorForm">Write us at least 5 characters</p>
-
-</div>
-
-<div class="buttonSubmit">
-    <button type="button" onclick="sendForm()" id="submitForm">Submit</button>
-    <p class="errorForm" id="errorSubmit" hidden>PLEASE, REVIEW THE REQUIRED FIELDS</p>
-</div>
-
-<!-- Modal de error -->
-<div class="modal" id="error-modal">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <p class="modal-title">Por favor revisa tu formulario</p>
-      <h4>Asegúrate de rellenar correctamente todas las casillas requeridas.</h4>
-    </div>
-  </div>
-  
-  <!-- Modal de éxito -->
-  <div class="modal" id="success-modal">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <p class="modal-title">¡Gracias!</p>
-      <h4>Hemos enviado tu solicitud correctamente.</h4>
-    </div>
-  </div>
-  
-</form>
-
-<footer-component></footer-component>
-<footer-component>
-    <footer class="footer">
-      <div class="address-info">
-        <a class="address-info-logo" href="/">
+    <header class="header">
+      <input type="checkbox" id="chkToggle" style="display: none" />
+      <nav class="navbar">
+        <a class="logo" href="/">
           <img src="../assets/logos/circle.svg" alt="Circle Logo" />
         </a>
-        <p>
-          2972 Westheimer Rd. Santa Ana,
-          <br />
-          Illinois 85486
+
+        <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+          <i class="fa fa-bars burger"></i>
+        </label>
+
+        <ul class="main-nav">
+          <li>
+            <a class="nav-links menu-selected" href="/">Home</a>
+          </li>
+          <li>
+            <a class="nav-links menu-selected" href="/#projects">Projects</a>
+          </li>
+          <li>
+            <a class="nav-links menu-selected" href="/#services">Services</a>
+          </li>
+          <li>
+            <a
+              class="btn capitalize"
+              href="./pages/contact.html"
+              id="menuBtnBurguer"
+              style="display: inline"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+
+        <a
+          class="btn capitalize"
+          href="./pages/contact.html"
+          id="menuBtnDesktop"
+          style="display: none"
+          >Contact us</a
+        >
+      </nav>
+    </header>
+
+    <form
+      id="form-container"
+      action=""
+      method="get"
+      class="formClass"
+      onsubmit="return false;"
+      novalidate
+    >
+      <h1>Contact Us</h1>
+
+      <div class="nameDiv">
+        <label for="name">Full name:</label><br />
+        <input
+          type="text"
+          placeholder="Enter your full name"
+          id="name"
+          name="name"
+          onblur="validateName()"
+          required
+        /><br />
+        <p id="nameError" hidden class="errorForm">
+          Please, complete the field NAME with your name
         </p>
       </div>
-      <ul class="sitemap">
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Press</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
-    </footer></footer-component
-  >
 
-</form>
+      <div class="emailAndPhone">
+        <div>
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email address"
+            onblur="validateEmail()"
+            required
+          />
+          <p id="errorEmail" hidden class="errorForm">
+            Please, complete the field EMAIL
+          </p>
+          <p id="errorFormatEmail" hidden class="errorForm">Invalid email</p>
+        </div>
 
-<script src="../js/contact.js"></script>
+        <div>
+          <label for="phone">Phone</label><br />
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Enter your phone number"
+            onblur="validatePhone()"
+            required
+          />
+          <p id="errorPhone" hidden class="errorForm">
+            Please enter your phone number
+          </p>
+        </div>
+      </div>
 
-</body>
+      <div class="messageDiv">
+        <label for="message">Message</label><br />
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Write your message here..."
+          onblur="validateMessage()"
+          required
+        ></textarea>
+        <p id="errorMessageUser" hidden class="errorForm">
+          Write us at least 5 characters
+        </p>
+      </div>
+
+      <div class="buttonSubmit">
+        <button type="button" onclick="sendForm()" id="submitForm">
+          Submit
+        </button>
+        <p class="errorForm" id="errorSubmit" hidden>
+          PLEASE, REVIEW THE REQUIRED FIELDS
+        </p>
+      </div>
+
+      <!-- Modal de error -->
+      <div class="modal" id="error-modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <p class="modal-title">Por favor revisa tu formulario</p>
+          <h4>
+            Asegúrate de rellenar correctamente todas las casillas requeridas.
+          </h4>
+        </div>
+      </div>
+
+      <!-- Modal de éxito -->
+      <div class="modal" id="success-modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <p class="modal-title">¡Gracias!</p>
+          <h4>Hemos enviado tu solicitud correctamente.</h4>
+        </div>
+      </div>
+    </form>
+
+    <footer-component>
+      <footer class="footer">
+        <div class="address-info">
+          <a class="address-info-logo" href="/">
+            <img src="../assets/logos/circle.svg" alt="Circle Logo" />
+          </a>
+          <p>
+            2972 Westheimer Rd. Santa Ana,
+            <br />
+            Illinois 85486
+          </p>
+        </div>
+        <ul class="sitemap">
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </footer></footer-component>
+
+    <script src="/js/contact.js"></script>
+  </body>
 </html>
