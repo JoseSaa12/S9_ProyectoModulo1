@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" type="text/css" href="../css/components/contact.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 
@@ -61,7 +62,7 @@
 
 <div class="nameDiv">
     <label for="name">Full name:</label><br>
-    <input type="text" placeholder="Enter your full name" id="name" name="name" onblur="validateName()" required><br>
+    <input type="text" placeholder="Enter your full name" id="name" name="name" onblur="validateName()" ><br>
     <p id="nameError" hidden class="errorForm">Please, complete the field NAME with your name </p>
 
 </div>
@@ -96,140 +97,53 @@
     <p class="errorForm" id="errorSubmit" hidden>PLEASE, REVIEW THE REQUIRED FIELDS</p>
 </div>
 
-<div class="modal">
+<!-- Modal de error -->
+<div class="modal" id="error-modal">
     <div class="modal-content">
-        <span class="close-button">x</span>
-        <p class="modal-title">Circle Agency</p>
-        <br>
-        <h4>Thank you! Your form has been sent successfully!!</h4>
+      <span class="close-button">&times;</span>
+      <p class="modal-title">Por favor revisa tu formulario</p>
+      <h4>Asegúrate de rellenar correctamente todas las casillas requeridas.</h4>
     </div>
-</div>
+  </div>
+  
+  <!-- Modal de éxito -->
+  <div class="modal" id="success-modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <p class="modal-title">¡Gracias!</p>
+      <h4>Hemos enviado tu solicitud correctamente.</h4>
+    </div>
+  </div>
+  
 </form>
 
 <footer-component></footer-component>
+<footer-component>
+    <footer class="footer">
+      <div class="address-info">
+        <a class="address-info-logo" href="/">
+          <img src="../assets/logos/circle.svg" alt="Circle Logo" />
+        </a>
+        <p>
+          2972 Westheimer Rd. Santa Ana,
+          <br />
+          Illinois 85486
+        </p>
+      </div>
+      <ul class="sitemap">
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </footer></footer-component
+  >
 
 </form>
 
-
-
-<script>
-    function validateName() {
-        const nameInput = document.getElementById("name");
-        const nameError = document.getElementById("nameError");
-        const isValid = nameInput.value.trim().length > 0;
-    
-        if (!isValid) {
-            nameInput.style.border = "2px solid red";
-            nameError.hidden = false;
-            console.log("❌ Nombre no válido");
-        } else {
-            nameInput.style.border = "2px solid green";
-            nameError.hidden = true;
-            console.log("✅ Nombre válido");
-        }
-    
-        return isValid;
-    }
-    
-    function validateEmail() {
-        const emailInput = document.getElementById("email");
-        const errorEmail = document.getElementById("errorEmail");
-        const errorFormat = document.getElementById("errorFormatEmail");
-    
-        const emailValue = emailInput.value.trim();
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail|outlook|hotmail|yahoo)\.com$/;
-    
-        let valid = true;
-    
-        if (!emailValue) {
-            emailInput.style.border = "2px solid red";
-            errorEmail.hidden = false;
-            errorFormat.hidden = true;
-            console.log("❌ Email vacío");
-            valid = false;
-        } else if (!emailRegex.test(emailValue)) {
-            emailInput.style.border = "2px solid red";
-            errorEmail.hidden = true;
-            errorFormat.hidden = false;
-            console.log("❌ Formato de email inválido");
-            valid = false;
-        } else {
-            emailInput.style.border = "2px solid green";
-            errorEmail.hidden = true;
-            errorFormat.hidden = true;
-            console.log("✅ Email válido");
-        }
-    
-        return valid;
-    }
-    
-    function validatePhone() {
-        const phoneInput = document.getElementById("phone");
-        const phoneError = document.getElementById("errorPhone");
-    
-        const isValid = /^\d{9,}$/.test(phoneInput.value.trim());
-    
-        if (!isValid) {
-            phoneInput.style.border = "2px solid red";
-            phoneError.hidden = false;
-            console.log("❌ Teléfono inválido");
-        } else {
-            phoneInput.style.border = "2px solid green";
-            phoneError.hidden = true;
-            console.log("✅ Teléfono válido");
-        }
-    
-        return isValid;
-    }
-    
-    function validateMessage() {
-        const messageInput = document.getElementById("message");
-        const messageError = document.getElementById("errorMessageUser");
-    
-        const isValid = messageInput.value.trim().length >= 5;
-    
-        if (!isValid) {
-            messageInput.style.border = "2px solid red";
-            messageError.hidden = false;
-            console.log("❌ Mensaje demasiado corto");
-        } else {
-            messageInput.style.border = "2px solid green";
-            messageError.hidden = true;
-            console.log("✅ Mensaje válido");
-        }
-    
-        return isValid;
-    }
-    
-    function sendForm() {
-        const isNameValid = validateName();
-        const isEmailValid = validateEmail();
-        const isPhoneValid = validatePhone();
-        const isMessageValid = validateMessage();
-    
-        const errorSubmit = document.getElementById("errorSubmit");
-    
-        if (isNameValid && isEmailValid && isPhoneValid && isMessageValid) {
-            errorSubmit.hidden = true;
-            console.log("✅ Formulario válido y enviado");
-    
-            // Mostrar modal o alerta
-            alert("Gracias, tu formulario ha sido enviado correctamente.");
-    
-            // Resetear el formulario si querés
-            document.querySelector(".formClass").reset();
-    
-            // Opcional: limpiar estilos
-            const inputs = document.querySelectorAll("input, textarea");
-            inputs.forEach(el => el.style.border = "");
-        } else {
-            errorSubmit.hidden = false;
-            console.log("❌ Formulario no válido. Revisar los campos.");
-        }
-    }
-    </script>
-    
-
+<script src="../js/contact.js"></script>
 
 </body>
 </html>
