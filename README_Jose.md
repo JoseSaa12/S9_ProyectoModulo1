@@ -51,10 +51,4 @@ Circle Agency es un sitio web totalmente responsivo construido exclusivamente co
 
 Este proyecto está listo para desplegarse en Netlify:
 
-Conecta tu repositorio Git.
-
-Configura el comando de construcción: (ninguno).
-
-Define el directorio de salida: / (raíz del proyecto).
-
-¡Listo! 🎉
+https://creative-profiterole-7ee8f4.netlify.app/
