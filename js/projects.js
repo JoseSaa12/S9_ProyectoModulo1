@@ -4,15 +4,22 @@ window.onload = () => {
   fetch(API_URL)
     .then(res => res.json())
     .then(projects => {
-      const mainProject = projects.find(p => p.uuid === 1); 
-      const otherProjects = projects.filter(p => p.uuid !== 1); 
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectUUID = urlParams.get("id");
+
+      const mainProject = projects.find(p => p.uuid === projectUUID); 
+      const otherProjects = projects.filter(p => p.uuid !== projectUUID); 
 
       
+      
+
+      console.log(projects);
+   console.log(mainProject);
+
       if (mainProject) {
         
         document.querySelector('.title').textContent = mainProject.name;
-
-        
         document.querySelector('.UI-design-title').textContent = mainProject.description;
         document.querySelector('.completed-title-data').textContent = mainProject.completed_on;
 
